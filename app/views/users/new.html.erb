@@ -6,15 +6,15 @@
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
-            <input type="text" name="username" class="form-control" name id="username" aria-describedby="usernamelHelp">
+            <input type="text" name="user[username]" class="form-control" name id="username" aria-describedby="usernamelHelp">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" , name="email" id="email" aria-describedby="emailHelp">
+            <input type="email" class="form-control" , name="user[email]" id="email" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password" id="password">
+            <input type="password" class="form-control" name="user[password]" id="password">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
