@@ -2,6 +2,8 @@
     <h1>
         Create user
     </h1>
+    <%
+=begin%>
     <form action="/users" method="post" accept-charset="UTF-8">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <div class="mb-3">
@@ -18,4 +20,18 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <%
+=end%>
+
+    <%=form_tag('/users') do%>
+    <%= label_tag(:username, "Username") %>
+    <%= text_field_tag(:username,"",class: 'form-control mb-1' ) %>
+    <%= label_tag(:email, "Email") %>
+    <%= email_field_tag(:email,"",class: 'form-control mb-1' ) %>
+    <%= label_tag(:password, "Password") %>
+    <%= password_field_tag(:password, "",class: 'form-control mb-1'  ) %>
+    <%= submit_tag("Submit",class: 'btn btn-primary mt-2') %>
+    <%end %>
+
+
 </div>
