@@ -1,0 +1,55 @@
+<div class="container mt-5 w-50">
+    <h1>
+        Create user
+    </h1>
+    <%
+=begin%>
+    <form action="/users" method="post" accept-charset="UTF-8">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="user[username]" class="form-control" name id="username" aria-describedby="usernamelHelp">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" , name="user[email]" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="user[password]" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <%
+=end%>
+
+    <%
+=begin%>
+    <%=form_tag('/users') do%>
+    <%= label_tag(:username, "Username") %>
+    <%= text_field_tag(:username,"",class: 'form-control mb-1' ) %>
+    <%= label_tag(:email, "Email") %>
+    <%= email_field_tag(:email,"",class: 'form-control mb-1' ) %>
+    <%= label_tag(:password, "Password") %>
+    <%= password_field_tag(:password, "",class: 'form-control mb-1'  ) %>
+    <%= submit_tag("Submit",class: 'btn btn-primary mt-2') %>
+    <%end %>
+    <%
+=end%>
+
+    <%= form_with model:@user  do |f| %>
+    <ul class="p-0 mb-3">
+        <% @user.errors.full_messages.each do |error| %>
+        <li class="list-unstyled text text-danger"><%= error %></li>
+        <% end %>
+    </ul>
+    <%= f.label :username, "Username",class:"form-label" %>
+    <%= f.text_field :username, class:"form-control" %>
+    <%= f.label :email, "Email", class:"form-label" %>
+    <%= f.email_field :email, placeholder:"example@example.com", class:"form-control" %>
+    <%= f.label :password, "Password",class:"form-label" %>
+    <%= f.password_field :password, class:"form-control" %>
+    <%= f.submit class:"btn btn-primary mt-3"  %>
+    <%end %>
+
+</div>

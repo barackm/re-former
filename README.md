@@ -1,24 +1,46 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Micro Reddit
 
-Things you may want to cover:
+> This project taugth me the multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters..
 
-* Ruby version
+Full task description: [Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms)
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby on Rails
 
-* Database creation
+## Getting Started
 
-* Database initialization
+**To get the local copy of this project you just need to clone it by running the following command from your terminal `git clone https://github.com/barackm/re-former`**
 
-* How to run the test suite
+# Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+After you have cloned the repository, you need to install all the available gems by running the command `bundle install` from the root of the project.
+And for creating the DB via rails run `rails db:create` and migrate it via run `rails db:migrate`
 
-* Deployment instructions
+### Setup
 
-* ...
+To play around with these forms you need to start the rails server by running the command `rails s` from the root of the project then open your browser to the address `http://localhost:3000/users/new`, and that's it you can now start creating users.
+
+## Author
+
+👤 **Barack Mukelenga**
+
+- GitHub: [@bacakm](https://github.com/barackm)
+- Twitter: [@BarackMukelenga](https://twitter.com/BarackMukelenga)
+- LinkedIn: [Baraka Mukelenga](https://www.linkedin.com/in/baraka-mukelenga/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/barackm/re-former/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
