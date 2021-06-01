@@ -23,8 +23,8 @@ class UsersController < ApplicationController
     @user.update(user_params)
 
     if @user.save
-      flash.notice = "User '#{@user.username}' updated successfully!"
-      redirect_to edit_user_path
+      flash.notice = "User #{@user.username.capitalize} updated successfully!"
+      redirect_to new_user_path
     else
       render :edit
     end
