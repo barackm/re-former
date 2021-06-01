@@ -35,7 +35,7 @@ To play around with these forms you need to start the rails server by running th
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/barackm/micro-reddit/issues).
+Feel free to check the [issues page](https://github.com/barackm/re-former/issues).
 
 ## Show your support
 
